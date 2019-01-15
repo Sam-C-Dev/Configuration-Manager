@@ -19,7 +19,7 @@
     $URL = "https://ibase.lenovo.com/POIRequest.aspx"
     $Method = "POST"
     $Header = @{ "Content-Type" = "application/x-www-form-urlencoded" }
-    $Body = "xml=<wiInputForm source='ibase'><id>LSC3</id><pw>IBA4LSC3</pw><product>$Product</product><serial>$SerialNumber</serial><wiOptions><machine/><parts/><service/><upma/><entitle/></wiOptions></wiInputForm>"
+    $Body = "xml=<wiInputForm source='ibase'><id>LSC3</id><pw>IBA4LSC3</pw><product></product><serial>$SerialNumber</serial><wiOptions><machine/><parts/><service/><upma/><entitle/></wiOptions></wiInputForm>"
     $RequestResult = Invoke-RestMethod -Method $Method -Uri $URL -Body $Body -Headers $Header
 
     $RegistryPath = "HKLM:\SOFTWARE\WarrantyInformation"
